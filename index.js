@@ -17,6 +17,7 @@ function Watcher(builder, options) {
   this.builder = builder;
   this.options = options || {};
   this.options.filter = this.options.filter || defaultFilterFunction;
+  this.options.watchman = this.options.watchman || true;
   this.watched = Object.create(null);
   this.timeout = null;
   this.sequence = this.build();
